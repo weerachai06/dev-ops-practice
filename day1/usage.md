@@ -353,9 +353,14 @@ kubectl port-forward service/nginx-service 8080:80
 ### Cleanup Commands
 - `kubectl delete <resource> <name>` - Delete specific resource
 - `kubectl delete -f <file>` - Delete from file
+- `kubectl delete pod <pod-name>` - Delete specific pod
+- `kubectl delete pods <pod1> <pod2> <pod3>` - Delete multiple pods
+- `kubectl delete pods -l app=nginx` - Delete pods by label
 
 ## Next Steps
 - Experiment with different service types (NodePort, LoadBalancer)
 - Try different deployment strategies (rolling updates)
 - Explore ConfigMaps and Secrets in Day 2
 - Learn about persistent volumes and storage classes
+
+## Used
