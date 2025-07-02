@@ -1,0 +1,63 @@
+{
+  "name": "Kubernetes Dev Environment",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "version": "latest",
+      "dockerDashComposeVersion": "v2"
+    },
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+      "version": "latest",
+      "helm": "latest",
+      "minikube": "none"
+    }
+  },
+
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-kubernetes-tools.vscode-kubernetes-tools",
+        "redhat.vscode-yaml",
+        "ms-vscode.vscode-json",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "yaml.schemas": {
+          "https://raw.githubusercontent.com/instrumenta/kubernetes-json-schema/master/v1.18.0-standalone-strict/all.json": "*.yaml"
+        },
+        "kubernetes-tools.vs-kubernetes.namespace": "",
+        "kubernetes-tools.vs-kubernetes.kubectl-path": "/usr/local/bin/kubectl"
+      }
+    }
+  },
+
+  "forwardPorts": [8080, 8081, 8082, 8083, 8084, 8085],
+  "portsAttributes": {
+    "8080": {
+      "label": "Kubernetes Service 1",
+      "onAutoForward": "notify"
+    },
+    "8081": {
+      "label": "Kubernetes Service 2",
+      "onAutoForward": "notify"
+    },
+    "8082": {
+      "label": "Kubernetes Service 3",
+      "onAutoForward": "notify"
+    }
+  },
+
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ],
+
+  "runArgs": ["--privileged"],
+
+  "remoteUser": "vscode"
+}
