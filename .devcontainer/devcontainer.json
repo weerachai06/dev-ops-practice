@@ -15,6 +15,7 @@
   },
 
   "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postStartCommand": "sudo chown -R vscode:vscode /workspaces/dev-ops-practice && sudo chmod +x /workspaces/dev-ops-practice/.devcontainer/setup.sh",
 
   "customizations": {
     "vscode": {
