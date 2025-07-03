@@ -11,8 +11,23 @@ sudo curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.23.0/kind-linux-amd64
 sudo chmod +x ./kind
 sudo mv ./kind /usr/local/bin/kind
 
-# Install kubectl (Kubernetes command-line tool)
-sudo kind create cluster --name my-cluster
+
+echo "🔧 Fixing Docker permissions..."
+# Ensure Docker is installed
+if ! command -v docker &> /dev/null; then
+    echo "Docker not found. Please install Docker first."
+    exit 1
+fi
+
+sudo chmod 666 /var/run/docker.sock
+
+# Checking cluster status, and creating a cluster if none exists
+if ! kind get clusters &> /dev/null; then
+    echo "🌐 No kind clusters found. Creating a new cluster..."
+    kind create cluster --name devops-practice --config /workspaces/dev-ops-practice/kind-config.yaml
+else
+    echo "🌐 Kind cluster already exists. Skipping creation."
+fi
 
 # Verify installations
 echo "✅ Verifying installations..."
