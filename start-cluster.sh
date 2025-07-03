@@ -3,17 +3,17 @@
 echo "🚀 Starting Kubernetes cluster with k3d..."
 
 # Check if cluster already exists
-if k3d cluster list | grep -q "dev-cluster"; then
-    echo "✅ Cluster 'dev-cluster' already exists"
-    k3d cluster start dev-cluster
+if k3d cluster list | grep -q "k3s-default"; then
+    echo "✅ Cluster 'k3s-default' already exists"
+    k3d cluster start k3s-default
 else
-    echo "📦 Creating new k3d cluster..."
-    k3d cluster create dev-cluster --port "8080:80@loadbalancer"
+    echo "📦 Creating new k3d cluster from config..."
+    k3d cluster create --config .devcontainer/k3d.yml
 fi
 
-# Set kubectl context
+# Set kubectl context (k3d config will handle this automatically)
 echo "🔧 Setting kubectl context..."
-kubectl config use-context k3d-dev-cluster
+kubectl config use-context k3d-k3s-default
 
 # Wait for cluster to be ready
 echo "⏳ Waiting for cluster to be ready..."
