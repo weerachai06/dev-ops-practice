@@ -19,15 +19,6 @@ if ! command -v docker &> /dev/null; then
     exit 1
 fi
 
-sudo chmod 666 /var/run/docker.sock
-
-# Checking cluster status, and creating a cluster if none exists
-if ! kind get clusters &> /dev/null; then
-    echo "🌐 No kind clusters found. Creating a new cluster..."
-    kind create cluster --name devops-practice --config /workspaces/dev-ops-practice/kind-config.yaml
-else
-    echo "🌐 Kind cluster already exists. Skipping creation."
-fi
 
 # Verify installations
 echo "✅ Verifying installations..."
