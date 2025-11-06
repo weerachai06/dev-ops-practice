@@ -152,6 +152,7 @@ FROM ubuntu:22.04
 
 # Metadata
 LABEL maintainer="your-email@example.com"
+LABEL version="1.0"
 
 # Set working directory
 WORKDIR /app

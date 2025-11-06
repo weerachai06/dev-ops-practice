@@ -4,10 +4,10 @@
 
 - [x] Understand what Docker is and its key benefits
 - [x] Learn the difference between Docker containers and Virtual Machines
-- [ ] Understand Docker Images (blueprints/templates)
-- [ ] Understand Docker Containers (running instances)
-- [ ] Understand Dockerfile (image build instructions)
-- [ ] Understand Docker Registry (image storage)
+- [x] Understand Docker Images (blueprints/templates)
+- [x] Understand Docker Containers (running instances)
+- [x] Understand Dockerfile (image build instructions)
+- [x] Understand Docker Registry (image storage)
 - [ ] Understand Docker Volumes (persistent data)
 - [ ] Understand Docker Networks (container communication)
 
@@ -19,52 +19,52 @@
 
 ## ✅ Working with Images
 
-- [ ] Search for images with `docker search`
-- [ ] Pull images from Docker Hub with `docker pull`
-- [ ] List local images with `docker images`
-- [ ] Remove images with `docker rmi`
+- [x] Search for images with `docker search`
+- [x] Pull images from Docker Hub with `docker pull`
+- [x] List local images with `docker images`
+- [x] Remove images with `docker rmi`
 
 ## ✅ Working with Containers
 
-- [ ] Run a basic container with `docker run`
-- [ ] Run container in detached mode with `docker run -d`
-- [ ] Run container with custom name using `--name`
-- [ ] Run container with port mapping using `-p`
-- [ ] List running containers with `docker ps`
-- [ ] List all containers with `docker ps -a`
-- [ ] Stop a container with `docker stop`
-- [ ] Start a stopped container with `docker start`
-- [ ] Remove a container with `docker rm`
-- [ ] Force remove running container with `docker rm -f`
+- [x] Run a basic container with `docker run`
+- [x] Run container in detached mode with `docker run -d`
+- [x] Run container with custom name using `--name`
+- [x] Run container with port mapping using `-p`
+- [x] List running containers with `docker ps`
+- [x] List all containers with `docker ps -a`
+- [x] Stop a container with `docker stop`
+- [x] Start a stopped container with `docker start`
+- [x] Remove a container with `docker rm`
+- [x] Force remove running container with `docker rm -f`
 
 ## ✅ Interactive Containers
 
-- [ ] Run container with interactive terminal using `-it`
-- [ ] Execute commands in running container with `docker exec`
-- [ ] View container logs with `docker logs`
-- [ ] Follow logs in real-time with `docker logs -f`
+- [x] Run container with interactive terminal using `-it`
+- [x] Execute commands in running container with `docker exec`
+- [x] View container logs with `docker logs`
+- [x] Follow logs in real-time with `docker logs -f`
 
 ## ✅ Dockerfile Mastery
 
-- [ ] Understand basic Dockerfile structure
-- [ ] Use FROM instruction (base image)
-- [ ] Use LABEL instruction (metadata)
-- [ ] Use WORKDIR instruction (set working directory)
-- [ ] Use COPY instruction (copy files to image)
+- [x] Understand basic Dockerfile structure
+- [x] Use FROM instruction (base image)
+- [x] Use LABEL instruction (metadata)
+- [x] Use WORKDIR instruction (set working directory)
+- [x] Use COPY instruction (copy files to image)
 - [ ] Use ADD instruction (advanced copy)
-- [ ] Use RUN instruction (execute build commands)
-- [ ] Use EXPOSE instruction (document ports)
-- [ ] Use ENV instruction (environment variables)
-- [ ] Use CMD instruction (default command)
+- [x] Use RUN instruction (execute build commands)
+- [x] Use EXPOSE instruction (document ports)
+- [x] Use ENV instruction (environment variables)
+- [x] Use CMD instruction (default command)
 - [ ] Use ENTRYPOINT instruction (main command)
 - [ ] Use VOLUME instruction (mount points)
 
 ## ✅ Building Custom Images
 
-- [ ] Build image from Dockerfile with `docker build`
-- [ ] Tag images properly with `-t`
-- [ ] Build with custom Dockerfile name using `-f`
-- [ ] Run custom built images
+- [x] Build image from Dockerfile with `docker build`
+- [x] Tag images properly with `-t`
+- [x] Build with custom Dockerfile name using `-f`
+- [x] Run custom built images
 
 ## ✅ Docker Volumes
 
@@ -153,14 +153,14 @@
 ### Day 1: Basics
 - [x] Install Docker (OrbStack)
 - [x] Run hello-world container
-- [ ] Try nginx and ubuntu containers
-- [ ] Practice basic commands
+- [x] Try nginx and ubuntu containers
+- [x] Practice basic commands
 
 ### Day 2: Images
-- [ ] Pull different images
-- [ ] Understand image layers
-- [ ] Create first Dockerfile
-- [ ] Build and run custom image
+- [x] Pull different images
+- [x] Understand image layers
+- [x] Create first Dockerfile
+- [x] Build and run custom image
 
 ### Day 3: Volumes & Data
 - [ ] Create named volumes
@@ -182,7 +182,7 @@
 
 ### Day 6: Best Practices
 - [ ] Optimize Dockerfiles
-- [ ] Implement multi-stage builds
+- [x] Implement multi-stage builds
 - [ ] Apply security practices
 - [ ] Create .dockerignore
 

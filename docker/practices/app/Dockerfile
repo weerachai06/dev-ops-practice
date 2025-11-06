@@ -1,5 +1,8 @@
 FROM oven/bun:latest AS builder
 
+# Metadata
+LABEL maintainer="your-email@example.com"
+
 WORKDIR /app
 
 # Cache packages installation
