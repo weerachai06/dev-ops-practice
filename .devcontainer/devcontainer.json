@@ -9,7 +9,6 @@
       "minikube": "latest"
     }
   },
-  "postCreateCommand": "git lfs install && minikube start --driver=docker",
   "postStartCommand": "git lfs install && minikube start --driver=docker",
   "customizations": {
     "vscode": {
