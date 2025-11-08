@@ -10,6 +10,7 @@
     }
   },
   "postCreateCommand": "git lfs install && minikube start --driver=docker",
+  "postStartCommand": "git lfs install && minikube start --driver=docker",
   "customizations": {
     "vscode": {
       "extensions": ["ms-kubernetes-tools.vscode-kubernetes-tools"]
