@@ -68,14 +68,14 @@
 
 ## ✅ Docker Volumes
 
-- [ ] Understand volume types (named, bind mounts, tmpfs)
-- [ ] Create named volumes with `docker volume create`
-- [ ] Run containers with volumes using `-v`
-- [ ] List volumes with `docker volume ls`
-- [ ] Inspect volumes with `docker volume inspect`
-- [ ] Remove volumes with `docker volume rm`
-- [ ] Use bind mounts for development
-- [ ] Use tmpfs mounts for temporary data
+- [x] Understand volume types (named, bind mounts, tmpfs)
+- [x] Create named volumes with `docker volume create`
+- [x] Run containers with volumes using `-v`
+- [x] List volumes with `docker volume ls`
+- [x] Inspect volumes with `docker volume inspect`
+- [x] Remove volumes with `docker volume rm`
+- [x] Use bind mounts for development
+- [x] Use tmpfs mounts for temporary data
 
 ## ✅ Docker Networks
 
@@ -98,12 +98,12 @@
 - [ ] Configure volumes in compose file
 - [ ] Configure environment variables in compose file
 - [ ] Configure networks in compose file
-- [ ] Use `depends_on` for service dependencies
-- [ ] Start services with `docker-compose up`
-- [ ] Start services in detached mode with `-d`
+- [x] Use `depends_on` for service dependencies
+- [x] Start services with `docker-compose up`
+- [x] Start services in detached mode with `-d`
 - [ ] Build and start with `--build`
-- [ ] Stop services with `docker-compose down`
-- [ ] Remove volumes with `docker-compose down -v`
+- [x] Stop services with `docker-compose down`
+- [x] Remove volumes with `docker-compose down -v`
 - [ ] View logs with `docker-compose logs`
 - [ ] List running services with `docker-compose ps`
 - [ ] Execute commands in services with `docker-compose exec`

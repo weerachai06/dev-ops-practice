@@ -21,8 +21,10 @@ services:
     #      size: 134217728 # 128*2^20 bytes = 128Mb
 
   my-app:
+    depends_on:
+      - db
     container_name: myapp
     image: myapp:latest
     restart: always
     ports:
-      - 8080:8080
+      - 8080:3000
